@@ -1,11 +1,6 @@
-sudo: required
-dist: trusty
 language: node_js
 node_js:
 - "7"
-
-addons:
-  firefox: "50.0"
 
 cache:
   directories:

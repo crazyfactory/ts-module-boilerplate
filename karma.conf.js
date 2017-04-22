@@ -2,7 +2,7 @@
 module.exports = function (config) {
     config.set({
 
-        frameworks: ["karma-typescript", "jasmine"],
+        frameworks: ["karma-typescript", "es6-shim", "jasmine"],
 
         files: [
             {pattern: "src/**/*.ts"}
@@ -41,7 +41,7 @@ module.exports = function (config) {
         },
 
         browsers: process.env.TRAVIS
-            ? ['Firefox', 'Chrome']
+            ? ['Firefox', 'ChromeTravis']
             : ['Firefox', 'Chrome'],
 
         // enable / disable colors in the output (reporters and logs)
