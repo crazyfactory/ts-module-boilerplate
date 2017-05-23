@@ -35,7 +35,7 @@
     "tslint-microsoft-contrib": "^5.0.0",
     "typescript": "^2.2.1",
     "validate-commit-msg": "^2.8.2",
-    "webpack": "^2.4.1",
+    "webpack": "^1.14.0",
     "whatwg-fetch": "^2.0.1"
   },
   "scripts": {
