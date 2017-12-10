@@ -30,7 +30,7 @@
     "karma-typescript": "^3.0.0",
     "node-fetch": "^1.6.3",
     "semantic-release": "^8.0.3",
-    "ts-node": "^3.0.0",
+    "ts-node": "^4.0.0",
     "tslint": "^5.1.0",
     "tslint-microsoft-contrib": "^5.0.0",
     "typescript": "^2.2.1",
