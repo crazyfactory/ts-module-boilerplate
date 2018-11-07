@@ -1,30 +1,35 @@
-# ts-module-boilerplate
+# translation_updater
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/crazyfactory/ts-module-boilerplate.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/crazyfactory/ts-module-boilerplate.svg)](https://travis-ci.org/crazyfactory/ts-module-boilerplate)
-[![GitHub issues](https://img.shields.io/github/issues/crazyfactory/ts-module-boilerplate.svg)](https://github.com/crazyfactory/ts-module-boilerplate/issues)
-[![codecov](https://codecov.io/gh/crazyfactory/ts-module-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/crazyfactory/ts-module-boilerplate)
-[![devDependencies Status](https://david-dm.org/crazyfactory/ts-module-boilerplate/dev-status.svg)](https://david-dm.org/crazyfactory/ts-module-boilerplate?type=dev)
-[![dependencies Status](https://david-dm.org/crazyfactory/ts-module-boilerplate/status.svg)](https://david-dm.org/crazyfactory/ts-module-boilerplate)
+[![Greenkeeper badge](https://badges.greenkeeper.io/crazyfactory/translation_updater.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/crazyfactory/translation_updater.svg)](https://travis-ci.org/crazyfactory/translation_updater)
+[![GitHub issues](https://img.shields.io/github/issues/crazyfactory/translation_updater.svg)](https://github.com/crazyfactory/translation_updater/issues)
+[![codecov](https://codecov.io/gh/crazyfactory/translation_updater/branch/master/graph/badge.svg)](https://codecov.io/gh/crazyfactory/translation_updater)
+[![devDependencies Status](https://david-dm.org/crazyfactory/translation_updater/dev-status.svg)](https://david-dm.org/crazyfactory/translation_updater?type=dev)
+[![dependencies Status](https://david-dm.org/crazyfactory/translation_updater/status.svg)](https://david-dm.org/crazyfactory/translation_updater)
 
-This boilerplate allows the quick creation of npm modules written in Typescript.
+This CLI tool helps to manage translations on individual packages,
+and automatically creates PR to target repository on any new releases on travis.
 
-- Typescript 2.x
-- creates an ES5 bundle
-- creates a TypeScript declaration bundle
-- packs it for npm usage
-- uses karma for testing
-- uses travis and semantic-release for deployment
-- uses linting, coverage and git hooks to increase code quality.
-- is configured to support wallaby
+Any time there's a new release in any package, simply run this CLI, it should automatically create a new PR to target repository with your translations.
+
+## Terminology
+### Target repository
+Main repository where translations are going to be consumed.
+
+### Source repository
+Your package repository where you store translations.
 
 ## Usage
 
 Initially you should:
 
-- clone this repository
-- update `package.json` (name, repository and description)
-- create your own `README.md` (from the `README.tpl.md`-file)
-- uncomment `after_success` block in `.travis.yml` to activate semantic-release
+- Add translations on your project.
+- setup travis
+- set the following environment variables in your source repository:
+  - `GH_TOKEN` token which has access to your target repository
+  - `LANGUAGE_PATH` path to translation file on your source repository
+  - `TARGET_LANGUAGE_PATH` path to translation file to be created on target repository
+  - `PROJECT_NAME` best to use name of your package without special characters. This is used name of branch created in target repository
+- on `after_success`, simply run this cli
 
-Afterwards you can start implementing classes and tests :)
+If everything goes well, a new PR should be created in target repository. If not, file an issue.
