@@ -22,4 +22,5 @@ after_script: greenkeeper-lockfile-upload
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  #- npm run semantic-release
+  - npm install -g travis-deploy-once@4.3.4
+  - travis-deploy-once "npm run semantic-release" --pro
