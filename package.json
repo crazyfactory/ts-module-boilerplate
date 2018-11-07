@@ -1,5 +1,6 @@
 {
-  "name": "@crazy-factory/ts-module-boilerplate",
+  "name": "@crazyfactory/uptrans",
+  "private": false,
   "description": "",
   "main": "./lib/index.js",
   "bin": {
