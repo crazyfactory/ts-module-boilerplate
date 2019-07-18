@@ -60,8 +60,7 @@
     "moduleDirectories": [
       "node_modules",
       "./"
-    ],
-    "setupTestFrameworkScriptFile": "./JestBootstrap.ts"
+    ]
   },
   "husky": {
     "hooks": {
