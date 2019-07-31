@@ -15,7 +15,7 @@
   "homepage": "https://github.com/crazyfactory/ts-module-boilerplate",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^23.3.7",
+    "@types/jest": "^24.0.0",
     "@types/node": "^11.9.0",
     "del-cli": "^1.0.0",
     "husky": "^1.1.2",
