@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "@types/node": "^12.6.9",
-    "del-cli": "^2.0.0",
+    "del-cli": "^3.0.0",
     "husky": "^1.1.2",
     "jest": "^23.6.0",
     "semantic-release": "^11.0.2",
