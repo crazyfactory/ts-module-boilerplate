@@ -9,11 +9,11 @@
 
 This boilerplate allows the quick creation of npm modules written in Typescript.
 
-- Typescript 2.x
+- Typescript 3.x
 - creates an ES5 bundle
 - creates a TypeScript declaration bundle
 - packs it for npm usage
-- uses karma for testing
+- uses jest for testing
 - uses travis and semantic-release for deployment
 - uses linting, coverage and git hooks to increase code quality.
 - is configured to support wallaby
