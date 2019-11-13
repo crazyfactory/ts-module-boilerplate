@@ -2,6 +2,8 @@
 .vscode/
 .idea/
 
+!.idea/runConfigurations/
+
 # builds
 lib/
 lib.es2015/
